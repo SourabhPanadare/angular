@@ -1,0 +1,18 @@
+{
+  "personalinfo":{
+    "name":"Sourabh Sudhir Panadare",
+    "contact":"09029339848",
+    "email":"sourabhpanadare@gmail.com",
+    "city":"Mumbai"
+  },
+  "skillsets":[
+    {"title":"Html","btn":"success","value":"80"},
+    {"title":"C.s.s","btn":"info","value":"70"},
+    {"title":"Jquery","btn":"warning","value":"70"}
+  ],
+  "experienceinfo":[
+    {"date":"May 2017 - Till Date","post":"Software Developer","company":"Sang Info"},
+    {"date":"February 2016 - April 2017","post":"FrontEnd Developer","company":"Foxymoron"},
+    {"date":"October 2014 - January 2016","post":"Frontend/WebApp Developer","company":"Ekraft"}
+  ]
+}
