@@ -62,7 +62,6 @@
   function ContactForm($scope){
       $scope.myTxt = "Please Complete Your Form";
     $scope.myFunc = function () {
-      alert();
       $scope.myTxt = "Submission Successfull";
     }
   }
