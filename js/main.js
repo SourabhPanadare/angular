@@ -4,38 +4,40 @@ $(document).ready(function(){
     easing: 'ease-in-out-sine'
   });
 
-  $('.experience-carousel').owlCarousel({
-    margin:10,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    },
-    nav:true,
-    navText:["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
+
+  $('#education-carousel').owlCarousel({
+    items : 3,
+    itemsDesktopSmall : [1199,3],
+    itemsTablet : [767,2],
+    itemsMobile: [479,1],
+    jsonPath : 'json/carousel.json',
+    jsonSuccess : customDataSuccess,
+    navigation:true,
+    navigationText:["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
   });
 
-  $('.education-carousel').owlCarousel({
-    margin:10,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    },
-    nav:true,
-    navText:["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
+  function customDataSuccess(data){
+
+    var content = "";
+    for(var i in data["educationinfo"]){
+
+      var date = data["educationinfo"][i].date;
+      var course = data["educationinfo"][i].course;
+      var institute = data["educationinfo"][i].institute;
+
+      content += '<div class="panel panel-default"><div class="panel-heading bkg-blue"><h4 class="clr-white">'+date+'</h4></div><div class="panel-body bkg-grey"><div class="panel-img"><img class="img-responsive" src="images/education.png" alt="img"/></div></div><div class="panel-footer bkg-blue"><h5 class="clr-white">'+course+'</h5><p class="clr-white">'+institute+'</p></div></div>';
+    }
+      $("#education-carousel").html(content);
+ }
+
+
+   $.getJSON( "data.json", function(data) {
+
+     var content = "";
+     $.each(data.aboutinfo, function(key, val){
+       content += '<p class="clr-black about-para">'+val.para+'</p>'
+    });
+    $('#aboutpara').html(content);
   });
 
 });
@@ -97,6 +99,8 @@ $("#mynavbar a").on('click', function(event) {
       });
     }  // End if
   });
+
+
 
   function initMap() {
     var uluru = {lat: 19.0421732, lng: 72.9024986};

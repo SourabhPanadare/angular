@@ -73,6 +73,10 @@ body,html{
   color:#727272 !important;
 }
 
+.clr-red{
+  color:red;
+}
+
 .font-roboto{
   font-family:'robotobold_condensed';
 }
@@ -97,9 +101,18 @@ a{
   margin-bottom:10px;
 }
 
+#education-carousel .owl-item, #experience-carousel .owl-item{
+  padding:0.5em;
+}
+
+.contactform .form-group div{
+  color:red;
+}
+
 /*-----------------------------------------Form-----------------------------------*/
 
-.float-label-control { position: relative; margin-bottom: 1.5em; }
+  .float-label-control { position: relative;height:55px;}
+  .float-label-control-textarea {height:105px}
   .float-label-control ::-webkit-input-placeholder { color:#bbbbbb; font-size:15px;}
   .float-label-control :-moz-placeholder { color:#bbbbbb; font-size:15px; }
   .float-label-control ::-moz-placeholder { color:#bbbbbb; font-size:15px; }
@@ -254,19 +267,23 @@ textarea {resize: none}
 
 
 
-.experience-carousel .panel-body, .education-carousel .panel-body{
+#experience-carousel .panel-body, #education-carousel .panel-body{
   min-height:200px;
   display:table;
   width:100%;
   padding:0;
 }
 
-.experience-carousel .panel-img, .education-carousel .panel-img{
+#experience-carousel .panel-img, #education-carousel .panel-img{
   display:table-cell;
   vertical-align:middle;
 }
 
-.experience-carousel .owl-prev, .education-carousel .owl-prev{
+#experience-carousel .panel-img img{
+  margin:auto;
+}
+
+#experience-carousel .owl-prev, #education-carousel .owl-prev{
   position: absolute;
   left: 60%;
   top: -12%;
@@ -280,7 +297,7 @@ textarea {resize: none}
   cursor:pointer;
 }
 
-.experience-carousel .owl-next, .education-carousel .owl-next{
+#experience-carousel .owl-next, #education-carousel .owl-next{
   position: absolute;
   left: 80%;
   top: -12%;
@@ -294,7 +311,7 @@ textarea {resize: none}
   cursor:pointer;
 }
 
-.education-carousel .owl-prev, .education-carousel .owl-next{
+#education-carousel .owl-prev, #education-carousel .owl-next{
   background:#00bcd4;
   color:white;
 }
@@ -367,10 +384,10 @@ textarea {resize: none}
   #skills .content{
     margin:1em auto;
   }
-  .education-carousel .owl-next{
+  #education-carousel .owl-next{
     left:93.5%;
   }
-  .education-carousel .owl-prev{
+  #education-carousel .owl-prev{
     left:85%;
   }
   .contact-txt{
@@ -400,8 +417,8 @@ textarea {resize: none}
   #contact form{
     margin-top:0;
   }
-  #map{
-    height:325px;
+  #map, .contactform{
+    height:460px;
   }
 }
 

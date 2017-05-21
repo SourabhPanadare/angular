@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.css"/>
 	<link rel="stylesheet" href="css/aos.min.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
 
@@ -80,11 +80,10 @@
           <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="aos-item" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
               <h3 class="text-uppercase clr-blue font-roboto about-head">My Story</h3>
-              <p class="clr-black about-para">I am professional frontend developer having around 2 years of experience into this field.</p>
-              <p class="clr-black about-para">I like to learn new frontend technologies such as angular js or node js.</p>
-              <p class="clr-black about-para">This Website is build using bootstrap,angularjs and json technologies.</p>
+              <div id="aboutpara"></div>
               <a href="Resume.pdf" class="text-uppercase btn btn-default bkg-blue clr-white home-button" target="_blank" ><i class="fa fa-download" aria-hidden="true"></i>&nbsp; &nbsp;Download Resume</a>
-            </div>
+							<a href="https://github.com/SourabhPanadare/bootstrap-angularjs" class="text-uppercase btn btn-default bkg-blue clr-white home-button" target="_blank" ><i class="fa fa-github" aria-hidden="true"></i>&nbsp; &nbsp;GitHub</a>
+						</div>
           </div>
           <div class="col-xs-12 hidden-sm col-md-4">
             <div class="aos-item" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000">
@@ -173,7 +172,7 @@
   </section>
 
 	<section id="experience" class="pos-relative bkg-blue">
-		<div class="container">
+		<div class="container" ng-controller = "Experience">
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="clearfix content">
@@ -181,14 +180,15 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="clearfix content">
-						<div class="owl-carousel experience-carousel">
-							<div class="item">
+						<data-owl-carousel id="experience-carousel" class="owl-carousel" data-options="{items : 3, itemsDesktopSmall : [1199,3], itemsTablet : [768,2], itemsMobile: [479,1], navigation: false,pagination: false, rewindNav : false}">
+							<div owl-carousel-item="" ng-repeat="item in experience" class="item">
 								<div class="panel panel-default">
 									<div class="panel-heading bkg-white">
-										<h5 class="clr-black">May 2017 - Present</h5>
+										<h5 class="clr-black">{{item.date}}</h5>
 									</div>
 									<div class="panel-body">
 										<div class="panel-img">
@@ -196,49 +196,18 @@
 										</div>
 									</div>
 									<div class="panel-footer bkg-white">
-										<h5 class="clr-blue">Software Developer</h5>
-										<p class="clr-black">Sang Infotech</p>
+										<h5 class="clr-blue">{{item.post}}</h5>
+										<p class="clr-black">{{item.company}}</p>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="panel panel-default">
-									<div class="panel-heading bkg-white">
-										<h5 class="clr-black">February 2016 - April2017</h5>
-									</div>
-									<div class="panel-body">
-										<div class="panel-img">
-											<img class="img-responsive" src="images/experience.png" alt="img"/>
-										</div>
-									</div>
-									<div class="panel-footer bkg-white">
-										<h5 class="clr-blue">FrontEnd Developer</h5>
-										<p class="clr-black">Foxymoron</p>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="panel panel-default">
-									<div class="panel-heading bkg-white">
-										<h5 class="clr-black">October 2014 - January 2016</h5>
-									</div>
-									<div class="panel-body">
-										<div class="panel-img">
-											<img class="img-responsive" src="images/experience.png" alt="img"/>
-										</div>
-									</div>
-									<div class="panel-footer bkg-white">
-										<h5 class="clr-blue">Frontend/WebApp Developer</h5>
-										<p class="clr-black">Ekraft</p>
-									</div>
-								</div>
-							</div>
-						</div>
+						</data-owl-carousel>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
 	<section id="education" class="pos-relative">
 		<div class="container">
 			<div class="row">
@@ -251,87 +220,8 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="clearfix content">
-						<div class="owl-carousel education-carousel">
-							<div class="item">
-								<div class="panel panel-default">
-									<div class="panel-heading bkg-blue">
-										<h4 class="clr-white">2014</h4>
-									</div>
-									<div class="panel-body bkg-grey">
-										<div class="panel-img">
-											<img class="img-responsive" src="images/education.png" alt="img"/>
-										</div>
-									</div>
-									<div class="panel-footer bkg-blue">
-										<h5 class="clr-white">.Net Diploma</h5>
-										<p class="clr-white">NIIT</p>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="panel panel-default">
-									<div class="panel-heading bkg-blue">
-										<h4 class="clr-white">2013</h4>
-									</div>
-									<div class="panel-body bkg-grey">
-										<div class="panel-img">
-											<img class="img-responsive" src="images/education.png" alt="img"/>
-										</div>
-									</div>
-									<div class="panel-footer bkg-blue">
-										<h5 class="clr-white">M.M.S</h5>
-										<p class="clr-white">MIMR</p>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="panel panel-default">
-									<div class="panel-heading bkg-blue">
-										<h4 class="clr-white">2011</h4>
-									</div>
-									<div class="panel-body bkg-grey">
-										<div class="panel-img">
-											<img class="img-responsive" src="images/education.png" alt="img"/>
-										</div>
-									</div>
-									<div class="panel-footer bkg-blue">
-										<h5 class="clr-white">B.E Electronics</h5>
-										<p class="clr-white">MIT</p>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="panel panel-default">
-									<div class="panel-heading bkg-blue">
-										<h4 class="clr-white">2007</h4>
-									</div>
-									<div class="panel-body bkg-grey">
-										<div class="panel-img">
-											<img class="img-responsive" src="images/education.png" alt="img"/>
-										</div>
-									</div>
-									<div class="panel-footer bkg-blue">
-										<h5 class="clr-white">H.S.C</h5>
-										<p class="clr-white">Maharashtra Board</p>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="panel panel-default">
-									<div class="panel-heading bkg-blue">
-										<h4 class="clr-white">2005</h4>
-									</div>
-									<div class="panel-body bkg-grey">
-										<div class="panel-img">
-											<img class="img-responsive" src="images/education.png" alt="img"/>
-										</div>
-									</div>
-									<div class="panel-footer bkg-blue">
-										<h5 class="clr-white">S.S.C</h5>
-										<p class="clr-white">Maharashtra Board</p>
-									</div>
-								</div>
-							</div>
+						<div id="education-carousel" class="owl-carousel">
+
 						</div>
 					</div>
 				</div>
@@ -339,7 +229,7 @@
 		</div>
 	</section>
 	<section id="contact" class="pos-relative bkg-blue">
-		<div class="container">
+		<div class="container" ng-controller = "ContactForm">
 			<div class="row">
 				<div class="col-xs-12">
 						<div class="clearfix content">
@@ -357,20 +247,44 @@
 						</div>
 					</div>
 					<div class="col-xs-12 col-md-6 col-lg-6">
-							<form role="form" class="bkg-white">
+							<form role="form" name="contactForm" class="bkg-white contactform" ng-submit="myFunc()">
+									<p class="clr-black text-center">{{myTxt}}</p>
 									<div class="form-group float-label-control">
 											<label for="name">Name</label>
-											<input type="text" name="name" class="form-control" placeholder="Name">
+											<input type="text" name="userName" ng-model="name" class="form-control" placeholder="Name" ng-required="true"/>
+											<div ng-messages="contactForm.userName.$error">
+											  	<div ng-message="required">This field is required *</div>
+											</div>
 									</div>
 									<div class="form-group float-label-control">
 											<label for="email">Email</label>
-											<input type="email" name="email" class="form-control" placeholder="Email">
+											<input type="email" name="userEmail" ng-model="email" class="form-control" placeholder="Email" ng-required="true"/>
+											<div ng-messages="contactForm.userEmail.$error">
+											  <div ng-message="required">This field is required *</div>
+											  <div ng-message="email">Must be a valid email id</div>
+											</div>
 									</div>
 									<div class="form-group float-label-control">
-											<label for="message">Message</label>
-											<textarea class="form-control" name="message" placeholder="Message" rows="5"></textarea>
+											<label for="contact">Contact</label>
+											<input type="text" name="userContact" ng-model="contact" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" ng-maxlength="10" class="form-control" placeholder="Contact Details" ng-required="true"/>
+											<div ng-messages="contactForm.userContact.$error">
+											  <div ng-message="required">This field is required *</div>
+											  <div ng-message="pattern">Must be a valid 10 digit phone number</div>
+												<div ng-message="maxlength">Must be a valid 10 digit phone number</div>
+											</div>
 									</div>
-									<a href="#" class="text-uppercase clr-blue btn btn-default" role="submit">Submit</a>
+									<div class="form-group float-label-control float-label-control-textarea">
+											<label for="message">Message</label>
+											<textarea class="form-control" name="userMessage" ng-model="message" placeholder="Message" rows="3"  ng-minlength="10" ng-maxlength="200" ng-required="true"></textarea>
+											<div ng-messages="contactForm.userMessage.$error">
+											  <div ng-message="required">This field is required *</div>
+											  <div ng-message="minlength">Message must be over 10 characters</div>
+											  <div ng-message="maxlength">Message must not exceed 200 characters</div>
+											</div>
+									</div>
+									<div class="form-group">
+										<input type="submit" class="text-uppercase clr-blue btn btn-default" value="submit">
+									</div>
 								</form>
 						</div>
 					</div>
@@ -395,7 +309,9 @@
 	<script src="js/aos.min.js"></script>
   <script src="js/angular.min.js"></script>
   <script src="js/angular-animate.min.js"></script>
+	<script src="js/angular-messages.min.js"></script>
   <script src="js/ui.bootstrap.collapse.js"></script>
+
   <script src="js/app.js"></script>
   <script src="js/main.js"></script>
 </body>
