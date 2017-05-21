@@ -1,4 +1,3 @@
-# bootstrap-angularjs
 
 
       <body ng-app="app"></body>
