@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cssmin = require('gulp-cssmin');
+const jsmin = require('gulp-jsmin');
 const browserSync = require('browser-sync').create();
 const plugins = require('./js/modules');
 const concat = require('gulp-concat');
@@ -35,14 +36,9 @@ gulp.task('js-build', function() {
 });
 
 gulp.task('js-minify', function() {
-  gulp.src('./dist/js/mdb.js')
-    .pipe(minify({
-      ext:{
-        // src:'.js',
-        min:'.min.js'
-      },
-      noSource: true,
-    }))
+  gulp.src(['./dist/js/*.js', '!dist/js/*.min.js'])
+    .pipe(jsmin())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist/js'));
 });
 
@@ -82,6 +78,6 @@ gulp.task('mdb-go', function() {
   gulp.watch("scss/**/*.scss", ['css-compile']);
   gulp.watch(["dist/css/*.css", "!dist/css/*.min.css"], ['css-minify']);
   gulp.watch("js/**/*.js", ['js-build']);
-  gulp.watch("dist/js/mdb.js", ['js-minify']);
+  gulp.watch(["dist/js/*.js", "!dist/js/*.min.js"], ['js-minify']);
   gulp.watch("**/*", {cwd: './img/'}, ['img-compression']);
 });

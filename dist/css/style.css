@@ -6,24 +6,34 @@ header,
   height: 100%;
 }
 
-.top-nav-collapse {
-  background-color: #563e91 !important;
+body,a{
+  font-family: 'Roboto Slab', serif;
 }
+
+.about-row, .skill-row{
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
+.top-nav-collapse, .page-footer {
+    background-color: #b2383c !important;
+}
+
 
 .navbar:not(.top-nav-collapse) {
   background: transparent !important;
 }
 
 .rgba-gradient {
-  background: -moz-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
-  background: -webkit-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
-  background: linear-gradient(to 45deg, rgba(213, 15, 61, 0.6), rgba(13, 17, 198, 0.69) 100%);
+  background: -moz-linear-gradient(to right, rgb(203, 53, 107), rgb(189, 63, 50));
+  background: -webkit-linear-gradient(to right, rgb(203, 53, 107), rgb(189, 63, 50));
+  background: linear-gradient(to right, rgb(203, 53, 107), rgb(189, 63, 50));
 }
 
-.rgba-contact-gradient{
-  background: -moz-linear-gradient(45deg, #563E91 0%, #79913E 100%);
-  background: -webkit-linear-gradient(45deg, #563E91 0%, #79913E 100%);
-  background: linear-gradient(to bottom, #563E91 0%, #79913E 100%); 
+.rgba-secondary-gradient{
+  background: -moz-linear-gradient(45deg, #64ff51,#f88900);
+  background: -webkit-linear-gradient(45deg, #64ff51,#f88900);
+  background: linear-gradient(45deg, #64ff51,#f88900); 
 }
 
 
@@ -78,8 +88,17 @@ figure:hover .content-overlay{
   color:#fff;
 }
 
-.top-nav-collapse, .page-footer {
-    background-color: #563e91 !important;
+.bntDownload{
+  color:#cb356b !important;
+  border:1px solid #cb356b;
+}
+
+.test-circle{
+  width:75%;
+}
+
+#test-circle3, #test-circle4{
+  width:50%;
 }
 
 @media (max-width: 740px) {
