@@ -1,0 +1,42 @@
+ <section class="container">
+    <div class="row">
+      <div class="col-md-12 no-padding">
+        <owl-carousel [options]="mySlideOptions" [items]="mySlideImages" [carouselClasses]="['owl-theme', 'sliding','banner-carousel']" >
+           <div class="item" *ngFor="let image of mySlideImages;let i = index">
+            <div>
+              <img src={{image}}/>
+            </div>
+           </div>
+        </owl-carousel>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="mat-display-1 home-heading float-left">Latest Gadgets</h1>
+        <button class="home-button float-right" mat-raised-button color="primary">Add To Cart</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <owl-carousel [options]="myCarouselOptions" [items]="gadgetOptions" [carouselClasses]="['owl-theme','sliding','gadget-carousel']">
+             <div class="item" *ngFor="let gadget of gadgetOptions;let i = index">
+                   <mat-card class="gadget-card" style="margin:15px;">
+                      <mat-card-header>
+                        <mat-card-title>{{gadget.title}}</mat-card-title>
+                        <mat-card-subtitle>{{gadget.subtitle}}</mat-card-subtitle>
+                      </mat-card-header>
+                      <img src={{gadget.image}} width="100%" alt="Gadget Image"/>
+                      <mat-card-content>
+                        <p>
+                          {{gadget.desc}}
+                        </p>
+                      </mat-card-content>
+                      <mat-card-actions (click)="goPlaces()">
+                        <button mat-stroked-button>Read More</button>
+                      </mat-card-actions>
+                   </mat-card>
+             </div>
+         </owl-carousel>
+      </div>
+    </div>
+  </section>

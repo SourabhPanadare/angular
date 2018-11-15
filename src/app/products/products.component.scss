@@ -1,0 +1,29 @@
+.full-width-form{
+  width:100%;
+}
+
+.page-spacing{
+  margin-top:3em;
+}
+
+.products-list mat-list-item{
+  border:1px solid #fff;
+  background:transparent;
+  cursor:pointer;
+  margin-bottom:0.5em;
+}
+
+.products-list mat-list-item:hover{
+  border:1px solid #c2185b;
+  color: #c2185b;
+}
+
+mat-card-content p{
+  max-height:115px;
+  padding:0.5em 0.2em;
+  overflow-y:hidden;
+}
+
+.product-card{
+  margin-bottom:1em;
+}

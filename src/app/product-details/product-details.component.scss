@@ -1,0 +1,37 @@
+.page-spacing{
+  margin-top:3em;
+}
+
+.product-left .mat-list-item{
+	border-bottom:1px solid rgba(255,255,255,.12);
+	margin:1em auto;
+}
+
+.product-left .mat-list-item h3{
+	margin:0em 0 1em;
+	font-size:15px;
+	padding-left:0px;
+}
+
+.product-left .mat-list-item p{
+	margin:0 1em 1em;
+	text-align:right;
+}
+
+.product-right .mat-list-item h3{
+	margin:1em 0;
+	padding:0;
+	font-size:15px;
+}
+
+.product-right .mat-list-item p{
+	margin:1em;
+}
+
+mat-divider{
+	clear:both;
+}
+
+mat-list-item{
+	height:auto !important;
+}

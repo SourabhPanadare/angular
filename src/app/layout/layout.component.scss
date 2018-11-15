@@ -1,0 +1,27 @@
+.example-icon {
+  padding: 0 14px;
+}
+
+.layout-height{
+  min-height:100vh;
+}
+
+mat-sidenav-container{
+  min-height:calc(100vh - 55px) !important;
+}
+
+.header-label{
+  margin-left:5px;
+}
+
+i{
+  font-size:24px;
+}
+
+.layout-height{
+  background:#c2185b;
+}
+
+.logo-text{
+  font-size:22px;
+}

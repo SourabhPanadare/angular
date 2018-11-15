@@ -1,0 +1,102 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$link-hover-decoration: none;    // remove underline from button links
+
+$link-color: #c2185b;            // set link color based on the used material theme
+$link-hover-color: currentColor;
+
+:focus {
+  outline: 0 !important;
+}
+
+body,html{
+    margin: 0;
+    padding:0;
+}
+
+.no-padding{
+  padding:0px !important;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.float-left{
+  float:left;
+}
+
+.float-right{
+  float:right;
+}
+
+/*--------------------------------Home Page--------------------------------------*/
+
+.banner-carousel .owl-prev, .banner-carousel .owl-prev:hover, .gadget-carousel .owl-prev, .gadget-carousel .owl-prev:hover{
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translatey(-50%);
+  font-size: 86px !important;
+  z-index: 1;
+  background: rgba(0,0,0,0.7) !important;
+  color: #fff !important;
+  width: 45px;
+}
+
+.banner-carousel .owl-next, .banner-carousel .owl-next:hover, .gadget-carousel .owl-next, .gadget-carousel .owl-next:hover{
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translatey(-50%);
+  font-size: 86px !important;
+  z-index: 1;
+  background: rgba(0,0,0,0.7) !important;
+  color: #fff !important;
+  width: 45px;
+}
+
+.gadget-carousel .owl-prev, .gadget-carousel .owl-prev:hover{
+  left:-18px;
+  font-size:45px !important;
+}
+
+.gadget-carousel .owl-next, .gadget-carousel .owl-next:hover{
+  right:-18px;
+  font-size:45px !important;
+}
+
+.banner-carousel .owl-dots{
+  position:absolute;
+  left:50%;
+  transform:translatex(-50%);
+  bottom:0;
+}
+
+/*----------------------------------------------------Pagination-------------------------------------------------*/
+.ngx-pagination{
+  padding: 0;
+  float: right;
+  margin: 1em 0;
+}
+
+.ngx-pagination .current{
+  background:transparent !important;
+  color:#c2185b !important;
+  border:1px solid #c2185b;
+}
+
+.ngx-pagination a, .ngx-pagination button{
+  color:#fff !important;
+}
+
+.ngx-pagination a:hover, .ngx-pagination button:hover{
+  background:transparent !important;
+  border:1px solid #fff !important;
+}

@@ -1,0 +1,47 @@
+<section class="container">
+  <div class="page-spacing">
+    <div class="row">
+      <div class="col-md-3">
+        <mat-form-field class="full-width-form">
+          <input matInput placeholder="Brands" aria-label="Brands">
+          <!-- <input matInput placeholder="Brands" aria-label="Brands" [matAutocomplete]="auto"> -->
+          <!-- <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+              <img class="example-option-img" aria-hidden [src]="state.flag" height="25">
+              <span>{{state.name}}</span> |
+              <small>Population: {{state.population}}</small>
+            </mat-option>
+          </mat-autocomplete> -->
+        </mat-form-field>
+        <mat-list class="products-list">
+         <mat-list-item> Television </mat-list-item>
+         <mat-list-item> Laptop </mat-list-item>
+         <mat-list-item> Mobile </mat-list-item>
+         <mat-list-item> Other </mat-list-item>
+        </mat-list>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+              <div class="col-md-4" *ngFor="let i = index;let product of productOptions|paginate: { itemsPerPage: 6, currentPage: p }">
+                 <mat-card class="product-card" (click)="goPlaces()">
+                    <mat-card-header>
+                      <mat-card-title>{{product.title}}</mat-card-title>
+                      <mat-card-subtitle>{{product.subtitle}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img src={{product.image}} width="100%" alt="Product Image"/>
+                    <mat-card-content>
+                      <p>
+                        {{product.desc}}
+                      </p>
+                    </mat-card-content>
+                    <mat-card-actions (click)="goPlaces()">
+                      <button mat-stroked-button>Read More</button>
+                    </mat-card-actions>
+                 </mat-card>
+              </div>
+         </div>
+         <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </div>
+  </div>
+</section>
