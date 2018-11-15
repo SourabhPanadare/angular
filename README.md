@@ -36,11 +36,7 @@
 
 # Angular App Testing With Karma And Jasmine
 
-  
-
-
-
-
+  ng test
 
 # Angular Project Structure
 
