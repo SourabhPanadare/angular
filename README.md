@@ -79,6 +79,32 @@ src/styles-variables.scss
    <app-layout></app-layout>
 
  src/app/app.module.ts
+    const appRoutes: Routes = [
+      {
+        path: '',
+        component: HomeComponent,
+        data: { title: 'Front Page' }
+      },
+      {
+        path: 'product-details',
+        component: ProductDetailsComponent,
+        data: { title: 'Product Details' }
+      }
+    ];
+
+    imports: [
+      BrowserModule,
+      RouterModule.forRoot(appRoutes,{ useHash: false }),
+      FormsModule,
+      FlexLayoutModule,
+      BrowserAnimationsModule,
+      MaterialModule,
+      OwlModule,
+      NgxPaginationModule
+    ],
     exports: [
        LayoutComponent
+    ],
+    providers: [
+       {provide: LocationStrategy, useClass: PathLocationStrategy} /*-----------------Removes # From Url-----------------*/
     ],

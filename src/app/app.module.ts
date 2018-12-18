@@ -8,6 +8,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material.module';
 import { OwlModule } from 'ngx-owl-carousel';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -54,7 +55,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes,{ useHash: true }),
+    RouterModule.forRoot(appRoutes,{ useHash: false }),
     FormsModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
@@ -65,7 +66,9 @@ const appRoutes: Routes = [
   exports: [
      LayoutComponent
   ],
-  providers: [],
+  providers: [
+     {provide: LocationStrategy, useClass: PathLocationStrategy} 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

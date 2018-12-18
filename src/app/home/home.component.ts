@@ -11,7 +11,21 @@ export class HomeComponent implements OnInit {
   mySlideImages = [1,2,3].map((i)=> `assets/images/banner${i}.jpg`);
   mySlideOptions={items: 1, dots: true, nav: true};
 
-  myCarouselOptions={items: 4, dots: false, nav: true};
+  myCarouselOptions={
+    responsive : {
+        0 : {
+            items: 1
+        },
+        600 : {
+            items: 2
+        },
+        960 : {
+            items: 4
+        },
+    },
+    dots: false, 
+    nav: true
+  };
   gadgetOptions = [
     {id:'1',title:'LG 8K TV',subtitle:'Gadget',image:'assets/images/gadget1.jpg',desc:'Just when you thought TVs couldnt get more ridiculously detailed.LG goes and announces the 88in 8K OLED panel TV ahead of CES claiming to have the largest and highest-resolution OLED panel ever.'},
     {id:'2',title:'Dell XPS 13 2018',subtitle:'Gadget',image:'assets/images/gadget2.jpg',desc:'The device not only boasts a lovely bezel-less display but according to Dell users will be able to squeeze a whopping 20-hours of battery life out of it when running in full HD.'},
@@ -31,6 +45,10 @@ export class HomeComponent implements OnInit {
 
   goPlaces() {
     this.router.navigate(['/', 'product-details']);
+  }
+
+  goProduct() {
+    this.router.navigate(['/', 'products']);
   }
 
 }

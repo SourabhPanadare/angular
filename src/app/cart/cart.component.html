@@ -1,3 +1,64 @@
-<p>
-  cart works!
-</p>
+<section class="container">
+	 <div class="page-spacing">
+		<div class="row">
+			<mat-card class="cart-card">
+				<mat-card-content>
+					<h2 class='mat-display-1'>Oops!</h2>
+					<h2 class="mat-display-1">No Products Found in Cart</h2>
+				</mat-card-content>
+				 <mat-card-actions>
+				 	<button mat-raised-button color="primary">Home</button>
+	   				<button mat-raised-button color="warn">Products</button>
+				 </mat-card-actions>
+			</mat-card>
+	    </div>
+    	<div class="row cart-sidebar">
+      		<div class="col-md-9">
+      			<div class="row">
+      				<div class="col-sm-6 col-md-6 col-lg-4" *ngFor="let i = index;let product of productOptions|paginate: { itemsPerPage: 6, currentPage: p }">
+      					<mat-card class="product-card">
+		                    <mat-card-header>
+		                      <mat-card-title>{{product.title}}</mat-card-title>
+		                      <mat-card-subtitle>{{product.subtitle}}</mat-card-subtitle>
+		                    </mat-card-header>
+		                    <img src={{product.image}} width="100%" alt="Product Image"/>
+		                    <mat-card-content>
+		                      <p>
+		                        {{product.desc}}
+		                      </p>
+		                    </mat-card-content>
+		                    <mat-card-actions (click)="goPlaces()">
+		                      <button mat-stroked-button>Read More</button>
+		                    </mat-card-actions>
+		                 </mat-card>
+      				</div>
+      			</div>
+      		</div>
+      		<div class="col-md-3">
+      			<mat-toolbar>  
+      			  <mat-toolbar-row>
+				    <span>Your Cart</span>
+				    <span class="example-spacer"></span>
+				    <span matBadge="10" matBadgeColor="warn" matBadgePosition="before"></span>
+				  </mat-toolbar-row>
+				</mat-toolbar>  
+			  	<mat-list class="products-list">
+		         <mat-list-item> 
+		         	<h3 class="mat-h3 col-md-7">Product Price</h3>
+             		<p class="mat-body-1 col-md-5">&#8377; 5500</p>
+		         </mat-list-item>
+		         <mat-list-item> 
+		         	<h3 class="mat-h3 col-md-7">Product Price</h3>
+             		<p class="mat-body-1 col-md-5">&#8377; 5500</p>
+		         </mat-list-item>
+		        </mat-list>
+		        <mat-list class="products-button">
+		        	<button mat-raised-button color="primary" (click)="goShipping()">Continue Shipping</button>
+		        </mat-list>
+		        <mat-list class="products-button">
+		        	<button mat-raised-button color="warn" (click)="goCheckout()">Checkout</button>
+		        </mat-list>
+      		</div>
+      	</div>
+     </div>
+</section>

@@ -22,8 +22,8 @@
       </div>
       <div class="col-md-9">
         <div class="row">
-              <div class="col-md-4" *ngFor="let i = index;let product of productOptions|paginate: { itemsPerPage: 6, currentPage: p }">
-                 <mat-card class="product-card" (click)="goPlaces()">
+              <div class="col-sm-6 col-md-6 col-lg-4" *ngFor="let i = index;let product of productOptions|paginate: { itemsPerPage: 6, currentPage: p }">
+                 <mat-card class="product-card">
                     <mat-card-header>
                       <mat-card-title>{{product.title}}</mat-card-title>
                       <mat-card-subtitle>{{product.subtitle}}</mat-card-subtitle>
