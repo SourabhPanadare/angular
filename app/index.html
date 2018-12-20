@@ -1,0 +1,324 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<title>Portfolio</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+  <!-- build:css css/external.css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.css"/>
+	<link rel="stylesheet" href="css/aos.min.css"/>
+  <!-- endbuild -->
+
+	<link rel="stylesheet" href="css/style.css"/>
+
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTHeEmWADpCEfjlZ_6FbN3p2by__-Tygg&callback=initMap">
+	</script>
+
+</head>
+<body ng-app="app">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container" ng-controller="NavigationCtrl as vm">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" ng-click="vm.toggleCollapse()">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="">Sourabh Portfolio</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+         <div id="navbar" class="navbar-collapse" style="overflow:hidden!important;" uib-collapse="vm.isCollapsed">
+          <ul id="mynavbar" class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#banner">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+  <section id="banner" class="pos-relative">
+    <div class="banner-overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="home-resize">
+            <div class="pos-relative text-center home-content" ng-controller = "WelcomeText">
+              <h1 class="text-uppercase text-center font-roboto clr-white no-mrg home-heading aos-item" data-aos="zoom-in">Hi! I'm <span class="clr-blue">{{welcometxt.name}}</span></h1>
+              <p class="clr-white banner-para no-mrg aos-item" data-aos="zoom-in" data-aos-delay="100">{{welcometxt.title}}</p>
+              <p class="clr-white banner-para no-mrg aos-item" data-aos="zoom-in" data-aos-delay="500">{{welcometxt.place}}</p>
+              <!-- <a href="#" class="text-uppercase btn btn-default bkg-blue clr-white home-button" role="button"><i class="fa fa-forward" aria-hidden="true"></i>&nbsp; &nbsp;Hire Me</a> -->
+              <div class="down-arrow hidden-xs hidden-sm">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="pos-relative">
+    <div class="container">
+      <div class="row">
+        <div class="clearfix content about-content">
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="aos-item" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+              <h3 class="text-uppercase clr-blue font-roboto about-head">My Story</h3>
+              <div id="aboutpara"></div>
+              <a href="../Resume.pdf" class="text-uppercase btn btn-default bkg-blue clr-white home-button" target="_blank" ><i class="fa fa-download" aria-hidden="true"></i>&nbsp; &nbsp;Download Resume</a>
+							<a href="https://github.com/SourabhPanadare/bootstrap-angularjs" class="text-uppercase btn btn-default bkg-blue clr-white home-button" target="_blank" ><i class="fa fa-github" aria-hidden="true"></i>&nbsp; &nbsp;GitHub</a>
+						</div>
+          </div>
+          <div class="col-xs-12 hidden-sm col-md-4">
+            <div class="aos-item" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000">
+              <div class="about-img">
+                <img class="img-thumbnail" src="images/portfolio.jpg" alt="img"/>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4"  ng-controller = "PersonalDetail">
+            <div class="aos-item" data-aos="flip-right" data-aos-delay="1000" data-aos-duration="1000">
+              <h3 class="text-uppercase clr-blue font-roboto about-head">Personal Information</h3>
+              <div class="row">
+                <div class="form-content">
+                  <div class="col-xs-4">
+                    <h4 class="clr-black form-head no-mrg">Name:</h4>
+                  </div>
+                  <div class="col-xs-8 no-pad">
+                    <p class="clr-black form-txt no-mrg">{{pd.name}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-content">
+                  <div class="col-xs-4">
+                    <h4 class="clr-black form-head no-mrg">Contact:</h4>
+                  </div>
+                  <div class="col-xs-8 no-pad">
+                    <p class="clr-black form-txt no-mrg">{{pd.contact}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-content">
+                  <div class="col-xs-4">
+                    <h4 class="clr-black form-head no-mrg">Email:</h4>
+                  </div>
+                  <div class="col-xs-8 no-pad">
+                    <p class="clr-black form-txt no-mrg">{{pd.email}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-content">
+                  <div class="col-xs-4">
+                    <h4 class="clr-black form-head no-mrg">City:</h4>
+                  </div>
+                  <div class="col-xs-8 no-pad">
+                    <p class="clr-black form-txt no-mrg">{{pd.city}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="pos-relative">
+    <div class="banner-overlay"></div>
+    <div class="container" ng-controller = "SkillSets">
+      <div class="row">
+        <div class="col-xs-12">
+            <div class="clearfix content">
+              <h3 class="text-uppercase clr-white font-roboto about-head">Skills</h3>
+            </div>
+        </div>
+      </div>
+      <div ng-repeat="skillInfo in skill">
+        <div class="row">
+          <div class="clearfix content">
+            <div class="col-xs-3">
+              <h4 class="text-uppercase font-roboto clr-white">{{skillInfo.title}}</h4>
+            </div>
+            <div class="col-xs-9">
+              <div class="progress">
+                <div class="progress-bar progress-bar-{{skillInfo.btn}} progress-bar-striped aos-item" role="progressbar" aria-valuenow="{{skillInfo.value}}" aria-valuemin="0" aria-valuemax="100" data-aos="fade-right" data-aos-duration="1000" style="width:{{skillInfo.value}}%">
+                  <span class="sr-only">{{skillInfo.value}}% Complete</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+	<section id="experience" class="pos-relative bkg-blue">
+		<div class="container" ng-controller = "Experience">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="clearfix content">
+						<h3 class="text-uppercase clr-white font-roboto about-head">Experience</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="clearfix content">
+						<data-owl-carousel id="experience-carousel" class="owl-carousel" data-options="{items : 3, itemsDesktopSmall : [1199,3], itemsTablet : [768,2], itemsMobile: [479,1], navigation: false,pagination: false, rewindNav : false}">
+							<div owl-carousel-item="" ng-repeat="item in experience" class="item">
+								<div class="panel panel-default">
+									<div class="panel-heading bkg-white">
+										<h5 class="clr-black">{{item.date}}</h5>
+									</div>
+									<div class="panel-body">
+										<div class="panel-img">
+											<img class="img-responsive" src="images/experience.png" alt="img"/>
+										</div>
+									</div>
+									<div class="panel-footer bkg-white">
+										<h5 class="clr-blue">{{item.post}}</h5>
+										<p class="clr-black">{{item.company}}</p>
+									</div>
+								</div>
+							</div>
+						</data-owl-carousel>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="education" class="pos-relative">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="clearfix content">
+						<h3 class="text-uppercase clr-black font-roboto about-head">Education</h3>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="clearfix content">
+						<div id="education-carousel" class="owl-carousel">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="contact" class="pos-relative bkg-blue">
+		<div class="container" ng-controller = "ContactForm">
+			<div class="row">
+				<div class="col-xs-12">
+						<div class="clearfix content">
+							<h3 class="text-uppercase clr-white font-roboto about-head">Contact</h3>
+							<p class="clr-white contact-txt">111, Hi-Five Bldg, R.C.F Colony, Chembur 400074</p>
+							<a href="http://sourabhportfolio.in/"><p class="clr-white contact-txt">www.sourabhportfolio.in</p></a>
+						</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="clearfix content map-form">
+					<div class="col-xs-12 col-md-6 col-lg-6">
+						<div id="map">
+
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6 col-lg-6">
+							<form role="form" name="contactForm" class="bkg-white contactform" ng-submit="myFunc()">
+									<p class="clr-black text-center">{{myTxt}}</p>
+									<div class="form-group float-label-control">
+											<label for="name">Name</label>
+											<input type="text" name="userName" ng-model="name" class="form-control" placeholder="Name" ng-required="true"/>
+											<div ng-messages="contactForm.userName.$error">
+											  	<div ng-message="required">This field is required *</div>
+											</div>
+									</div>
+									<div class="form-group float-label-control">
+											<label for="email">Email</label>
+											<input type="email" name="userEmail" ng-model="email" class="form-control" placeholder="Email" ng-required="true"/>
+											<div ng-messages="contactForm.userEmail.$error">
+											  <div ng-message="required">This field is required *</div>
+											  <div ng-message="email">Must be a valid email id</div>
+											</div>
+									</div>
+									<div class="form-group float-label-control">
+											<label for="contact">Contact</label>
+											<input type="text" name="userContact" ng-model="contact" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" ng-maxlength="10" class="form-control" placeholder="Contact Details" ng-required="true"/>
+											<div ng-messages="contactForm.userContact.$error">
+											  <div ng-message="required">This field is required *</div>
+											  <div ng-message="pattern">Must be a valid 10 digit phone number</div>
+												<div ng-message="maxlength">Must be a valid 10 digit phone number</div>
+											</div>
+									</div>
+									<div class="form-group float-label-control float-label-control-textarea">
+											<label for="message">Message</label>
+											<textarea class="form-control" name="userMessage" ng-model="message" placeholder="Message" rows="3"  ng-minlength="10" ng-maxlength="200" ng-required="true"></textarea>
+											<div ng-messages="contactForm.userMessage.$error">
+											  <div ng-message="required">This field is required *</div>
+											  <div ng-message="minlength">Message must be over 10 characters</div>
+											  <div ng-message="maxlength">Message must not exceed 200 characters</div>
+											</div>
+									</div>
+									<div class="form-group">
+										<input type="submit" class="text-uppercase clr-blue btn btn-default" value="submit">
+									</div>
+								</form>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+						<div class="clearfix content">
+							<h5 class="clr-black">&copy; Copyright sourabhportfolio</h5>
+						</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+  <!-- build:js js/external.js -->
+  <script src="js/jquery-2.0.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/aos.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-animate.min.js"></script>
+	<script src="js/angular-messages.min.js"></script>
+  <script src="js/ui.bootstrap.collapse.js"></script>
+  <!-- endbuild -->
+
+  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
+  
+</body>
+</html>

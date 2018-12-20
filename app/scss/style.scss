@@ -1,0 +1,272 @@
+@import 'partials';
+
+#about, #skills, #experience, #education, #contact{
+    padding:2em 0;
+}
+
+#banner{
+  background:url('../images/background.jpg') no-repeat fixed center center / cover;
+}
+
+.banner-overlay{
+  background:rgba(0,0,0,0.7);
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+}
+
+.home-resize{
+  width:80%;
+  margin:0 auto;
+  height: calc(100vh - 100px);
+  display:table;
+  padding-top:50px;
+}
+
+.home-content{
+  color: #fff;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.home-button{
+  border-radius:3px;
+  border:none;
+  padding: 0.75em 1em;
+  margin-top:2em;
+}
+
+.down-arrow{
+    width: auto;
+    position: absolute;
+    top:80%;
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+    -moz-transform: translatex(-50%);
+    -ms-transform: translatex(-50%);
+    transform: translatex(-50%);
+    color: black;
+    cursor:pointer;
+}
+
+.down-arrow i{
+  font-size: 25px;
+  margin-top: 0.3em;
+}
+
+.content{
+  width:90%;
+  margin:auto;
+}
+
+.about-para{
+  line-height:28px;
+}
+
+.about-content{
+  margin-bottom:2em;
+}
+
+.about-img{
+  width:90%;
+  margin:0 auto;
+  margin-top: 1em;
+}
+
+.form-content{
+  width:100%;
+  padding-bottom:1em;
+  margin-bottom:1em;
+  display:table;
+  border-bottom:1px solid #eeeeee;
+}
+
+#skills{
+  background: url(../images/skill.jpg) no-repeat fixed;
+  background-size: 180% 140%;
+  background-position: 30% 30%;
+}
+
+
+
+#experience-carousel .panel-body, #education-carousel .panel-body{
+  min-height:200px;
+  display:table;
+  width:100%;
+  padding:0;
+}
+
+#experience-carousel .panel-img, #education-carousel .panel-img{
+  display:table-cell;
+  vertical-align:middle;
+}
+
+#experience-carousel .panel-img img{
+  margin:auto;
+}
+
+#experience-carousel .owl-prev, #education-carousel .owl-prev{
+  position: absolute;
+  left: 60%;
+  top: -12%;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding-top: 0.25em;
+  padding-left: 0.75em;
+  font-size: 1.5em;
+  cursor:pointer;
+}
+
+#experience-carousel .owl-next, #education-carousel .owl-next{
+  position: absolute;
+  left: 80%;
+  top: -12%;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding-top: 0.25em;
+  padding-left: 0.75em;
+  font-size: 1.5em;
+  cursor:pointer;
+}
+
+#education-carousel .owl-prev, #education-carousel .owl-next{
+  background:#00bcd4;
+  color:white;
+}
+
+#map{
+  width:100%;
+  height:250px;
+}
+
+#contact form{
+  border-radius:0;
+  margin-top:1em;
+  padding:1em;
+}
+
+#contact .btn{
+  border:none;
+  background:transparent;
+}
+
+
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in {
+        display: block !important;
+    }
+    .row-eq-height{
+      display:block;
+    }
+    .mobile-pad{
+      padding:0;
+    }
+}
+
+@media(min-width:768px){
+  .banner-para{
+    font-size:1.4em;
+  }
+  #skills .content{
+    margin:1em auto;
+  }
+  #education-carousel .owl-next{
+    left:93.5%;
+  }
+  #education-carousel .owl-prev{
+    left:85%;
+  }
+  .contact-txt{
+    font-size:1.2em;
+  }
+  .about-img{
+    margin-top:0em;
+  }
+}
+
+@media(min-width:992px){
+  .home-resize{
+    height:100vh;
+  }
+  #about, #skills, #experience, #education, #contact{
+    padding:8em 0;
+  }
+  .about-img{
+    margin-top:2em;
+  }
+  .about-head{
+    font-size:2em;
+  }
+  .map-form{
+    margin-top:2em;
+  }
+  #contact form{
+    margin-top:0;
+  }
+  #map, .contactform{
+    height:460px;
+  }
+}
+
+@media(min-width:1200px){
+  #banner h1{
+    font-size:72px;
+  }
+  .banner-para {
+    font-size: 30px;
+  }
+}
+
+@media(min-width:1900px){
+  #about, #skills, #experience, #education, #contact {
+    height:90vh;
+    padding-top:15em;
+  }
+  #experience{
+    padding-top:10em;
+  }
+  #education, #contact{
+    padding-top:12em;
+  }
+}

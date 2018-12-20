@@ -1,0 +1,262 @@
+@font-face {
+  font-family: 'robotobold_condensed';
+  src: url("../fonts/roboto-boldcondensed-webfont.woff2") format("woff2"), url("../fonts/roboto-boldcondensed-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+body, html {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden; }
+
+.custom-col-10 {
+  padding-left: 10px !important;
+  padding-right: 10px !important; }
+
+.custom-col-7 {
+  padding-left: 7.5px !important;
+  padding-right: 7.5px !important; }
+
+.custom-col-5 {
+  padding-left: 5px !important;
+  padding-right: 5px !important; }
+
+.no-pad {
+  padding: 0 !important; }
+
+.no-mrg {
+  margin: 0; }
+
+.no-pad-rgt {
+  padding-right: 0 !important; }
+
+.no-pad-lft {
+  padding-left: 0 !important; }
+
+.pos-relative {
+  position: relative; }
+
+.bkg-white {
+  background-color: #ffffff !important; }
+
+.bkg-blue {
+  background-color: #00bcd4 !important; }
+
+.bkg-grey {
+  background-color: #dedede !important; }
+
+.clr-white {
+  color: #fff !important; }
+
+.clr-blue {
+  color: #00bcd4 !important; }
+
+.clr-black {
+  color: #727272 !important; }
+
+.clr-red {
+  color: red; }
+
+.font-roboto {
+  font-family: 'robotobold_condensed'; }
+
+a {
+  text-decoration: none; }
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.panel-default {
+  border-radius: 0; }
+
+.progress {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+#education-carousel .owl-item, #experience-carousel .owl-item {
+  padding: 0.5em; }
+
+.contactform .form-group div {
+  color: red; }
+
+/*-----------------------------------------Form-----------------------------------*/
+.float-label-control {
+  position: relative;
+  height: 55px; }
+
+.float-label-control-textarea {
+  height: 105px; }
+
+.float-label-control ::-webkit-input-placeholder {
+  color: #bbbbbb;
+  font-size: 15px; }
+
+.float-label-control :-moz-placeholder {
+  color: #bbbbbb;
+  font-size: 15px; }
+
+.float-label-control ::-moz-placeholder {
+  color: #bbbbbb;
+  font-size: 15px; }
+
+.float-label-control :-ms-input-placeholder {
+  color: #bbbbbb;
+  font-size: 15px; }
+
+.float-label-control input:-webkit-autofill,
+.float-label-control textarea:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -moz-box-shadow: 0 0 0 1000px white inset !important;
+  box-shadow: 0 0 0 1000px white inset !important; }
+
+.float-label-control input, .float-label-control textarea, .float-label-control label {
+  font-size: 1.3em;
+  box-shadow: none;
+  -webkit-box-shadow: none; }
+
+.float-label-control input:focus,
+.float-label-control textarea:focus {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border-bottom-width: 2px;
+  padding-bottom: 0; }
+
+.float-label-control textarea:focus {
+  padding-bottom: 4px; }
+
+.float-label-control input, .float-label-control textarea {
+  display: block;
+  width: 100%;
+  padding: 0.1em 0em 1px 0em;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #aaa;
+  outline: none;
+  margin: 0px;
+  background: none; }
+
+.float-label-control textarea {
+  padding: 0.1em 0em 5px 0em; }
+
+.float-label-control label {
+  position: absolute;
+  font-weight: normal;
+  top: -1.0em;
+  left: 0.08em;
+  color: #aaaaaa;
+  z-index: -1;
+  font-size: 0.85em;
+  -moz-animation: float-labels 300ms none ease-out;
+  -webkit-animation: float-labels 300ms none ease-out;
+  -o-animation: float-labels 300ms none ease-out;
+  -ms-animation: float-labels 300ms none ease-out;
+  -khtml-animation: float-labels 300ms none ease-out;
+  animation: float-labels 300ms none ease-out;
+  animation-play-state: running !important;
+  -webkit-animation-play-state: running !important; }
+
+.float-label-control input.empty + label,
+.float-label-control textarea.empty + label {
+  top: 0.1em;
+  font-size: 1.5em;
+  animation: none;
+  -webkit-animation: none; }
+
+.float-label-control input:not(.empty) + label,
+.float-label-control textarea:not(.empty) + label {
+  z-index: 1; }
+
+.float-label-control input:not(.empty):focus + label,
+.float-label-control textarea:not(.empty):focus + label {
+  color: #aaaaaa; }
+
+.float-label-control.label-bottom label {
+  -moz-animation: float-labels-bottom 300ms none ease-out;
+  -webkit-animation: float-labels-bottom 300ms none ease-out;
+  -o-animation: float-labels-bottom 300ms none ease-out;
+  -ms-animation: float-labels-bottom 300ms none ease-out;
+  -khtml-animation: float-labels-bottom 300ms none ease-out;
+  animation: float-labels-bottom 300ms none ease-out; }
+
+.float-label-control.label-bottom input:not(.empty) + label,
+.float-label-control.label-bottom textarea:not(.empty) + label {
+  top: 3em; }
+
+@keyframes float-labels {
+  0% {
+    opacity: 1;
+    color: #aaa;
+    top: 0.1em;
+    font-size: 1.5em; }
+  20% {
+    font-size: 1.5em;
+    opacity: 0; }
+  30% {
+    top: 0.1em; }
+  50% {
+    opacity: 0;
+    font-size: 0.85em; }
+  100% {
+    top: -1em;
+    opacity: 1; } }
+
+@-webkit-keyframes float-labels {
+  0% {
+    opacity: 1;
+    color: #aaa;
+    top: 0.1em;
+    font-size: 1.5em; }
+  20% {
+    font-size: 1.5em;
+    opacity: 0; }
+  30% {
+    top: 0.1em; }
+  50% {
+    opacity: 0;
+    font-size: 0.85em; }
+  100% {
+    top: -1em;
+    opacity: 1; } }
+
+@keyframes float-labels-bottom {
+  0% {
+    opacity: 1;
+    color: #aaa;
+    top: 0.1em;
+    font-size: 1.5em; }
+  20% {
+    font-size: 1.5em;
+    opacity: 0; }
+  30% {
+    top: 0.1em; }
+  50% {
+    opacity: 0;
+    font-size: 0.85em; }
+  100% {
+    top: 3em;
+    opacity: 1; } }
+
+@-webkit-keyframes float-labels-bottom {
+  0% {
+    opacity: 1;
+    color: #aaa;
+    top: 0.1em;
+    font-size: 1.5em; }
+  20% {
+    font-size: 1.5em;
+    opacity: 0; }
+  30% {
+    top: 0.1em; }
+  50% {
+    opacity: 0;
+    font-size: 0.85em; }
+  100% {
+    top: 3em;
+    opacity: 1; } }
+
+textarea {
+  resize: none; }
