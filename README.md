@@ -76,7 +76,9 @@ src/styles-variables.scss
    <app-footer></app-footer>
 
  src/app/app.component.html
-   <app-layout></app-layout>
+   <app-layout>
+	<router-outlet></router-outlet>
+   </app-layout>
 
  src/app/app.module.ts
     const appRoutes: Routes = [
