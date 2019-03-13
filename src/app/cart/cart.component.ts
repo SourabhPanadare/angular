@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
     {id:'3',title:'Lenovo ThinkPad',subtitle:'Gadget',image:'assets/images/gadget3.jpg',desc:'This series includes privacy protection features such as an IR camera fingerprint reader and a ThinkShutter webcam cover to protect users from being watched by computer hijackers.'}
   ]
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
