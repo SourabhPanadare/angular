@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+body{ font-family: Helvetica}
+a{ font-family: Helvetica; outline:none 0;}
+button{ outline:none 0;}
+.sec-h-text{font-size: 35px;color: #233e86; font-weight: bold; padding-bottom: 20px;}
+.sec-h-text::before{ position:absolute; content: ""; height:3px; background-color: #4cdbff; width: 40px; transform: translateY(40px);}
+.sec-sub-text{font-size: 17px;color: #000}
+.sec-sub-text p span{color: #233e86; font-weight: bold;}
+.light-blue{background-color: #4cdbff}
+.dark-blue{background-color: #233e86}
+.footer-bg-color{background-color: #233e86}
+.footer-text-color{color: #fff;}
+
+/*------------------------Owl Carousel-------------------------------------*/
+.owl-carousel{
+    display: flex !important;
+    align-items: center;
+}
+/* .owl-nav{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+} */
+
+.owl-nav button {
+    position: absolute;
+    outline: none;
+    background-color: #233e86 !important;
+    height: 60px;
+    width: 35px;
+
+}
+
+.owl-prev{
+    left: -20px;
+    border-radius: 50px 0 0 50px;
+}
+
+.owl-prev.disabled span{
+    color: #a78c8cbd;
+}
+
+.owl-next{
+    right: -20px;
+    border-radius: 0px 50px 50px 0px;
+}
+
+.owl-next.disabled span{
+    color: #a78c8cbd;
+}
+
+.owl-nav button span{
+    line-height: 30px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+}
+.carousel-section[_ngcontent-c0]{
+    height: auto !important;
+}
+
+.owl-carousel-holder{
+    width:100%;
+    float: left;
+}
+
+.carousel-section{
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-top: 0px;
+}
+
+.slider-image-section{
+    width: 100%;
+    height:480px;
+    float: left;
+}
+.col-xl-pr-3{
+    padding-right: 30px;
+}
+.col-xl-pl-3{
+    padding-left: 30px;
+}
+
+/*-------------------------------------------------------------------------*/
+
+@media (max-width: 568px) {
+
+    .owl-prev{
+        left: -20px;
+    }
+    .owl-next{
+        right: -20px;
+    }
+    .col-p-0{padding: 0}
+    .col-pr-0{padding-right: 0 }
+    .col-pl-0{padding-left: 0 }
+    .col-mt-3{margin-top: 3%}
+    .slider-flex{flex-direction: column;}
+    .slide-border-left,.slide-border-right{border: 3px solid #4cdbff;}
+    .services-div{padding:5% 2%}
+}
+
+@media (max-width: 992px){
+
+}

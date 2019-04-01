@@ -1,0 +1,9 @@
+.bg-tra-color{
+    background-image: url('../../assets/images/top-menu-bg.png');
+}
+
+@media(max-width:992px){
+   nav .custom-logo img{
+     width:100%;
+   }
+}

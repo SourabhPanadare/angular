@@ -1,0 +1,173 @@
+/*-------------------------Banner Section---------------------------*/
+button{ outline:none 0;}
+.bannerimg{
+    width: 100%;
+    background-image: url("../../assets/images/banner-img.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+.mouse-down-btn{
+	border: none 0;
+	background: transparent;
+}
+.div-scroll-new{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 10%;
+	outline: 0 none;
+}
+.head-text{
+	font-size: 55px;
+	font-family: Helvetica;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+}
+.know-more{
+	border-radius: 20px;
+    background-color: #4cdbff;
+    border: 0 none;
+    font-size: 20px;
+    padding: 5px 20px;
+}
+
+.padding-section{ padding: 3% 0;}
+
+.social-container {
+	position: relative;
+	display: inline-block;
+	width: 164px;
+	height: 36px;
+	perspective: 300px;
+	font-size: 20px;
+	padding: 22px 85px;
+
+}
+	.social-container .social-cube {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: all 0.333s;
+	transform: translateZ(-18px);
+	text-transform:none;
+}
+	.social-container .social-cube .front, .social-container .social-cube .bottom {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #000;
+	transition: background 0.333s;
+}
+	.social-container .social-cube .front {
+	transform: rotateX(0deg) translateZ(18px);
+}
+.social-container .social-cube .bottom {
+	transform: rotateX(-90deg) translateZ(18px);
+}
+.social-container:hover .social-cube {
+	transform: translateZ(-18px) rotateX(90deg);
+
+}
+.social-container.twitter .social-cube .front, .social-container.twitter .social-cube .back {
+	background: #4cdbff;
+		border-radius: 20px;
+}
+.social-container.twitter .social-cube .bottom {
+background: transparent;
+		border-radius: 20px;
+
+}
+.social-container.twitter:hover .social-cube .bottom {
+	background: #4cdbff;
+		border-radius: 20px;
+}
+.social-container.twitter:hover .social-cube .front {
+	background: transparent;
+		border-radius: 20px;
+}
+
+
+
+/*-----------------------------------------------------------------*/
+
+/*-----------------------------------------Service Section--------------*/
+	.ico-h-text{font-size: 18px;color: #000; font-weight: bold;}
+	.ico-h-text-hover{font-size: 18px;color: #4cdbff; font-weight: bold; text-align: center;}
+    .ico-sub-text-hover{font-size: 17px;color: #000; font-weight: normal;text-align: center}
+    .bottom-div:hover {border-radius: 15px;
+		-webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.64);
+		-moz-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.64);
+		box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.64);
+		-webkit-transition: 0.3s ease-in-out;
+		-moz-transition:0.3s ease-in-out;
+		-o-transition: 0.3s ease-in-out;
+		transition:0.3s ease-in-out;
+		background-color: #fff;
+		z-index: 9;
+		transform: scale(1.1, 1.1);
+		justify-content: center !important;
+	}
+	.services-div{padding:5% 2%}
+	.bottom-div:hover .hover-div{display: flex; align-content: center; flex-direction: column;}
+	.bottom-div:hover .bottom-div1{display: none;}
+	.hover-div{display: none;}
+	.bottom-div1{display: flex; flex-direction: column;  text-align: center;margin: 1.2vw 0%;  width: 100%;}
+	.bottom-div:after{ position: absolute;content: ""; height: 60px; background-color: #a6edff; width: 1px; top: 50%; right: 0%; transform: translateY(-50%);}
+	.bottom-div:hover:after{display: none;}
+	.bottom-div:last-child:after{display: none;}
+
+/*----------------------------------------------------------------------*/
+
+/*-------------------------Report Section----------------------------------*/
+.txt-h2-white{font-size: 30px;color: #fff;}
+.txt-h2-white span{font-size: 30px;color: #4cdbff;}
+.txt-h2-sub-white{font-size: 18px;color: #fff;}
+/*---------------------------------------------------------------------------*/
+
+/*-------------------------Slider Section----------------------------------*/
+	.slider-flex{display: flex;}
+	.date-text{font-size: 16px;color: #000}
+	.h-text{font-size: 22px;color: #233e86}
+	.h-s-text{font-size: 17px;color: #000}
+	.btn-div{font-size: 16px;color: #000}
+	.border-round-10{border-radius: 10px}
+	.slide-border-left{border-bottom: 3px solid #4cdbff;border-top: 3px solid #4cdbff;border-left: 3px solid #4cdbff; padding:20px; }
+	.slide-border-right{border-bottom: 3px solid #4cdbff;border-top: 3px solid #4cdbff;border-right: 3px solid #4cdbff; padding:20px;}
+	.know-more-slide{border-radius: 20px; background-color: #4cdbff;border: 0 none;font-size: 14px;padding: 5px 20px; color:#233e86; font-weight: bold;}
+	.know-more-slide a{ color:#233e86}
+
+
+/*------------------------- Slider  Section----------------------------------*/
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.txt-h2-white,.text-md-left{font-size: 23px;}
+	.txt-h2-sub-white{font-size: 12px;}
+	.sec-sub-text{font-size: 14px;}
+	.h-text{ font-size: 18px;}
+	.h-s-text{ font-size: 14px;}
+	.know-more-slide{border-radius: 20px; background-color: #4cdbff;border: 0 none;font-size: 12px;padding: 5px 20px; color:#000}
+	.know-more-slide a{font-size: 12px;padding: 5px 20px; color:#000}
+
+	}
+@media (max-width: 568px) {
+	.ico-h-text{font-size: 12px;}
+	.head-text{font-size: 40px;}
+
+	}
+
+@media (max-width:992px) {
+  
+}
