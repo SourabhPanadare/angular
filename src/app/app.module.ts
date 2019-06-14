@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { OwlModule } from 'ngx-owl-carousel';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
-import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 const appRoutes: Routes = [
   {
@@ -19,9 +21,9 @@ const appRoutes: Routes = [
     data: { title: 'Front Page' }
   },
   {
-    path: 'about',
-    component: AboutComponent,
-    data: { title: 'About Page' }
+    path: 'contact',
+    component: ContactComponent,
+    data: { title: 'Contact Page' }
   },
 ];
 
@@ -33,12 +35,13 @@ const appRoutes: Routes = [
     HeaderComponent,
     HomeComponent,
     LayoutComponent,
-    AboutComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     OwlModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes,{ useHash: true })
   ],
   providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
