@@ -1,3 +1,22 @@
+/* ------------------------Gray Scale -----------------------------*/
+.home-category img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.home-category:hover{
+  background:#28a745!important;
+  color:#fff!important;
+}
+
+.home-category:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+  cursor:default;
+}
+/*----------------------------------------------------------------*/
+
 /*------------------------------------Banner Carousel---------------------------*/
 #homeBanner{
   height:100vh;
@@ -68,12 +87,18 @@
   box-shadow:0px 0px 20px 10px rgba(8, 8, 8, 0.9);
 }
 
-#randomReceipr .jumbtron-name a:hover{
+#randomReceipe .jumbtron-name a:hover{
   text-decoration:none;
   color:#0c5460 !important;
 }
 
-#receipeCategories{
-  background:url('../images/homebackground.jpg');
+#homeContent{
+  background:url('../../images/homebackground.jpg');
   background-size:cover;
+}
+
+#homeContent .home-category .card-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

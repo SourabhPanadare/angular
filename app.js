@@ -20,6 +20,10 @@ app.get("/", function(req, res){
   res.render("index")
 });
 
+app.get("/category", function(req, res){
+  res.render("category")
+});
+
 app.listen(3000, function(){
   console.log('Server up: http://localhost:3000');
 });
