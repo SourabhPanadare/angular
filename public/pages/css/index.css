@@ -6,7 +6,7 @@
 	transition: .3s ease-in-out;
 }
 .home-category:hover{
-  background:#28a745!important;
+  background:#dc3545!important;
   color:#fff!important;
 }
 
@@ -15,6 +15,20 @@
 	filter: grayscale(0);
   cursor:default;
 }
+/*----------------------------------------------------------------*/
+
+/*-------------------------------Zoom Effect----------------------*/
+#homeContent .media img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+#homeContent .media img:hover{
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
 /*----------------------------------------------------------------*/
 
 /*------------------------------------Banner Carousel---------------------------*/
@@ -101,4 +115,19 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+#randomReceipe .jumbtron-name a:hover{
+	color:#dc3545!important;
+	text-decoration:none;
+}
+
+#homeContent .media h5:hover{
+	color:#dc3545!important;
+	cursor:pointer;
+}
+
+#homeContent .media-img{
+	width:100px;
+	overflow:hidden;
 }

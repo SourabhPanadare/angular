@@ -20,8 +20,12 @@ app.get("/", function(req, res){
   res.render("index")
 });
 
-app.get("/category", function(req, res){
+app.get("/categories", function(req, res){
   res.render("category")
+});
+
+app.get("/receipe", function(req, res){
+  res.render("receipe")
 });
 
 app.listen(3000, function(){
