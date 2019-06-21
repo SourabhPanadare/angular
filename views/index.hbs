@@ -44,9 +44,9 @@
             <div class="jumbotron pt-0 pb-3">
               <h3 class="jumbtron-title text-white text-center font-italic display-4">Today's Special</h3>
               <div class="jumbotron-image">
-                  <img src="https://www.themealdb.com/images/media/meals/t3r3ka1560461972.jpg"/>
+                  <img src="{{randomdetails.mealimage}}"/>
               </div>
-              <h2 class="text-white text-center mt-3 jumbtron-name"><a href="#" class="text-white">Chicken Enchilada Casserole</a></h2>
+              <h2 class="text-white text-center mt-3 jumbtron-name"><a href="/receipe/{{randomdetails.mealid}}" class="text-white">{{randomdetails.mealname}}</a></h2>
             </div>
           </div>
         </div>
@@ -59,96 +59,18 @@
     <div class="row">
       <div class="col-lg-9">
         <div class="row mt-3 pt-5">
+          {{#each categorydetails}}
           <div class="col-lg-4">
-            <a href="#" class="btn mb-4 p-0">
+            <a href="/categories/{{categoryid}}" class="btn mb-4 p-0">
               <div class="card text-muted bg-dark home-category">
-                  <img class="card-img-top" src="https://www.themealdb.com/images/category/beef.png" alt="Card image cap">
+                  <img class="card-img-top" src="{{categoryimage}}" alt="Card image cap">
                   <div class="card-body">
-                     <h5 class="card-title text-center">Beef</h5>
+                     <h5 class="card-title text-center">{{categoryname}}</h5>
                   </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-4">
-            <a href="#" class="btn mb-4 p-0">
-              <div class="card text-muted bg-dark home-category">
-                  <img class="card-img-top" src="https://www.themealdb.com/images/category/chicken.png" alt="Card image cap">
-                  <div class="card-body">
-                     <h5 class="card-title text-center">Chicken</h5>
-                  </div>
-               </div>
-            </a>
-          </div>
-          <div class="col-lg-4">
-            <a href="#" class="btn mb-4 p-0">
-              <div class="card text-muted bg-dark home-category">
-                <img class="card-img-top" src="https://www.themealdb.com/images/category/dessert.png" alt="Card image cap">
-                <div class="card-body">
-                   <h5 class="card-title text-center">Dessert</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4">
-            <a href="#" class="btn mb-4 p-0">
-              <div class="card text-muted bg-dark home-category">
-                <img class="card-img-top" src="https://www.themealdb.com/images/category/lamb.png" alt="Card image cap">
-                <div class="card-body">
-                   <h5 class="card-title text-center">Lamb</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4">
-            <a href="#" class="btn mb-4 p-0">
-              <div class="card text-muted bg-dark home-category">
-                <img class="card-img-top" src="https://www.themealdb.com/images/category/miscellaneous.png" alt="Card image cap">
-                <div class="card-body">
-                   <h5 class="card-title text-center">Miscellaneous</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4">
-            <a href="#" class="btn mb-4 p-0">
-              <div class="card text-muted bg-dark home-category">
-                <img class="card-img-top" src="https://www.themealdb.com/images/category/pasta.png" alt="Card image cap">
-                <div class="card-body">
-                   <h5 class="card-title text-center">Pasta</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4">
-            <a href="#" class="btn mb-4 p-0">
-              <div class="card text-muted bg-dark home-category">
-                <img class="card-img-top" src="https://www.themealdb.com/images/category/seafood.png" alt="Card image cap">
-                <div class="card-body">
-                   <h5 class="card-title text-center">Sea Food</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4">
-            <a href="#" class="btn mb-4 p-0">
-              <div class="card text-muted bg-dark home-category">
-                <img class="card-img-top" src="https://www.themealdb.com/images/category/side.png" alt="Card image cap">
-                <div class="card-body">
-                   <h5 class="card-title text-center">Side</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4">
-            <a href="#" class="btn mb-4 p-0">
-              <div class="card text-muted bg-dark home-category">
-                <img class="card-img-top" src="https://www.themealdb.com/images/category/starter.png" alt="Card image cap">
-                <div class="card-body">
-                   <h5 class="card-title text-center">Starter</h5>
-                </div>
-              </div>
-            </a>
-          </div>
+          {{/each}}
         </div>
       </div>
       <div class="col-lg-3">
@@ -157,16 +79,18 @@
             <h3 class="text-white mt-3 mb-3">Latest Recipes</h3>
           </div>
         </div>
+        {{#each latestdetails}}
         <div class="media mb-3">
           <div class="media-img mr-3">
-            <img src="https://www.themealdb.com/images/media/meals/t3r3ka1560461972.jpg" class="align-self-start" style="width:100px">
+            <img src="{{latestimage}}" class="align-self-start" style="width:100px">
           </div>
           <div class="media-body">
-            <p class="text-warning mt-0 mb-1 text-uppercase">Dessert</p>
-            <h5 class="text-white">Cashew Ghoriba Biscuits</h5>
+            <p class="text-warning mt-0 mb-1 text-uppercase">{{latestcategory}}</p>
+            <a href="/receipe/{{latestid}}"><h5 class="text-white">{{latestname}}</h5></a>
           </div>
         </div>
-        <div class="media mb-3">
+        {{/each}}
+        <!-- <div class="media mb-3">
           <div class="media-img mr-3">
             <img src="https://www.themealdb.com/images/media/meals/2dsltq1560461468.jpg" class="align-self-start" style="width:100px">
           </div>
@@ -201,7 +125,7 @@
             <p class="text-warning mt-0 mb-1 text-uppercase">Lamb</p>
             <h5 class="text-white">Tunisian Lamb Soup</h5>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

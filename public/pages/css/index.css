@@ -124,7 +124,10 @@
 
 #homeContent .media h5:hover{
 	color:#dc3545!important;
-	cursor:pointer;
+}
+
+#homeContent .media a{
+	text-decoration:none;
 }
 
 #homeContent .media-img{

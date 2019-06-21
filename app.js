@@ -2,6 +2,10 @@ var express = require('express');
 var exphbs = require( 'express-handlebars');
 var path = require('path');
 
+const indexRouter = require('./routes/index');
+const categoryRouter = require('./routes/category');
+const receipeRouter = require('./routes/receipe');
+
 var app = express();
 
 app.engine("hbs", exphbs({
@@ -16,17 +20,9 @@ app.set('view engine', 'hbs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/", function(req, res){
-  res.render("index")
-});
-
-app.get("/categories", function(req, res){
-  res.render("category")
-});
-
-app.get("/receipe", function(req, res){
-  res.render("receipe")
-});
+app.get('/', indexRouter);
+app.get('/categories/:id',categoryRouter);
+app.get('/receipe/:id',receipeRouter);
 
 app.listen(3000, function(){
   console.log('Server up: http://localhost:3000');
