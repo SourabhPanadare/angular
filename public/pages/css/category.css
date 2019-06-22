@@ -79,3 +79,12 @@
   background:rgba(0,0,0,0.5);
   box-shadow:0px 0px 20px 10px rgba(8, 8, 8, 0.9);
 }
+
+.category-card, .category-grid-card{
+  cursor:pointer;
+}
+
+.category-grid-container{
+  height:calc(100vh - 50px);
+  overflow:auto;
+}

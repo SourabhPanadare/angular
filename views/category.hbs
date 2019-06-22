@@ -1,5 +1,5 @@
 {{#contentFor 'pageStyles'}}
-  <link rel="stylesheet" href="pages/css/category.css" />
+  <link rel="stylesheet" href="/pages/css/category.css" />
 {{/contentFor}}
 
 <section id="receipeCategories" class="h-100">
@@ -22,102 +22,18 @@
                 </div>
             </div>
           </div>
+        </div>
+        <div class="row category-grid-container">
+          {{#each meals}}
           <div class="col-lg-4">
-            <div class="card mb-4 text-white category-grid-card">
-                <img class="card-img-top" src="https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg" alt="Card image cap">
+            <a class="card mb-4 text-white category-grid-card" href="/receipe/{{idMeal}}">
+                <img class="card-img-top" src="{{strMealThumb}}" alt="receipes">
                 <div class="overlay">
-                  <div class="text">Brown Stew Chicken</div>
+                  <div class="text">{{strMeal}}</div>
                 </div>
-             </div>
+            </a>
           </div>
-          <div class="col-lg-4">
-            <div class="card mb-4 text-white category-grid-card">
-                <img class="card-img-top" src="https://www.themealdb.com/images/media/meals/uuuspp1511297945.jpg" alt="Card image cap">
-                <div class="overlay">
-                  <div class="text">Chicken & mushroom Hotpot</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card mb-4 text-white category-grid-card">
-                <img class="card-img-top" src="https://www.themealdb.com/images/media/meals/syqypv1486981727.jpg" alt="Card image cap">
-                <div class="overlay">
-                  <div class="text">Chicken Alfredo Primavera</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card mb-4 text-white category-grid-card">
-                <img class="card-img-top" src="https://www.themealdb.com/images/media/meals/wruvqv1511880994.jpg" alt="Card image cap">
-                <div class="overlay">
-                  <div class="text">Chicken Basquaise</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card mb-4 text-white category-grid-card">
-                <img class="card-img-top" src="https://www.themealdb.com/images/media/meals/1529446352.jpg" alt="Card image cap">
-                <div class="overlay">
-                  <div class="text">Chicken Congee</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card mb-4 text-white category-grid-card">
-                <img class="card-img-top" src="https://www.themealdb.com/images/media/meals/qxytrx1511304021.jpg" alt="Card image cap">
-                <div class="overlay">
-                  <div class="text">Chicken Couscous</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card mb-4 text-white category-grid-card">
-                <img class="card-img-top" src="https://www.themealdb.com/images/media/meals/qtuwxu1468233098.jpg" alt="Card image cap">
-                <div class="overlay">
-                  <div class="text">Chicken Enchilada Casserole</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card mb-4 text-white category-grid-card">
-                <img class="card-img-top" src="https://www.themealdb.com/images/media/meals/qrqywr1503066605.jpg" alt="Card image cap">
-                <div class="overlay">
-                  <div class="text">Chicken Fajita Mac and Cheese</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card mb-4 text-white category-grid-card">
-                <img class="card-img-top" src="https://www.themealdb.com/images/media/meals/xrrtss1511555269.jpg" alt="Card image cap">
-                <div class="overlay">
-                  <div class="text">Chicken Ham and Leek Pie</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card mb-4 text-white category-grid-card">
-                <img class="card-img-top" src="https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg" alt="Card image cap">
-                <div class="overlay">
-                  <div class="text">Chicken Handi</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card mb-4 text-white category-grid-card">
-                <img class="card-img-top" src="https://www.themealdb.com/images/media/meals/tyywsw1505930373.jpg" alt="Card image cap">
-                <div class="overlay">
-                  <div class="text">Chicken Karaage</div>
-                </div>
-             </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card mb-4 text-white category-grid-card">
-                <img class="card-img-top" src="https://www.themealdb.com/images/media/meals/qpxvuq1511798906.jpg" alt="Card image cap">
-                <div class="overlay">
-                  <div class="text">Chicken Marengo</div>
-                </div>
-             </div>
-          </div>
+          {{/each}}
         </div>
       </div>
       <div class="col-lg-4">
@@ -127,6 +43,7 @@
           </div>
         </div>
         <div class="row mt-3">
+
           <div class="col-lg-6">
             <div class="card mb-3 text-white bg-dark category-card">
               <img class="card-img-top" src="https://www.themealdb.com/images/category/beef.png" alt="Card image cap">
@@ -198,5 +115,5 @@
 </section>
 
 {{#contentFor 'pageScripts'}}
-  <link rel="stylesheet" href="pages/js/category.js" />
+  <link rel="stylesheet" href="/pages/js/category.js" />
 {{/contentFor}}

@@ -1,41 +1,43 @@
 {{#contentFor 'pageStyles'}}
-  <link rel="stylesheet" href="pages/css/receipe.css" />
+  <link rel="stylesheet" href="/pages/css/receipe.css" />
 {{/contentFor}}
 <section id="receipeDetails" class="h-100 d-flex align-items-center">
   <div class="container-fluid">
+    {{#each meals}}
     <div class="media pt-3 pb-3">
-      <img class="mr-3 img-fluid col-lg-5" src="https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg" alt="receipe">
+      <img class="mr-3 img-fluid col-lg-5" src="{{strMealThumb}}" alt="receipe">
       <div class="media-body text-white">
-        <h3 class="mt-0 text-warning">Teriyaki Chicken Casserole</h3>
-        <p class="pr-3">Preheat oven to 350° F. Spray a 9x13-inch baking pan with non-stick spray. Combine soy sauce, ½ cup water, brown sugar, ginger and garlic in a small saucepan and cover. Bring to a boil over medium heat. Remove lid and cook for one minute once boiling. Meanwhile, stir together the corn starch and 2 tablespoons of water in a separate dish until smooth. Once sauce is boiling, add mixture to the saucepan and stir to combine. Cook until the sauce starts to thicken then remove from heat. Place the chicken breasts in the prepared pan. Pour one cup of the sauce over top of chicken. Place chicken in oven and bake 35 minutes or until cooked through. Remove from oven and shred chicken in the dish using two forks. *Meanwhile, steam or cook the vegetables according to package directions. Add the cooked vegetables and rice to the casserole dish with the chicken. Add most of the remaining sauce, reserving a bit to drizzle over the top when serving. Gently toss everything together in the casserole dish until combined. Return to oven and cook 15 minutes. Remove from oven and let stand 5 minutes before serving. Drizzle each serving with remaining sauce. Enjoy!
-        </p>
+        <h3 class="mt-0 text-warning">{{strMeal}}</h3>
+        <p class="pr-3">{{strInstructions}}</p>
         <h5 class="text-warning">Ingridients:-</h5>
         <div class="receipe-ingridients row">
-          <div class="col-lg-4">3/4 cup <span>soy sauce</span></div>
-          <div class="col-lg-4">1/2 cup <span>water</span></div>
-          <div class="col-lg-4">1/4 cup <span>brown sugar</span></div>
-          <div class="col-lg-4">1/2 teaspoon <span>ground ginger</span></div>
-          <div class="col-lg-4">1/2 teaspoon <span>minced garlic</span></div>
-          <div class="col-lg-4">4 Tablespoons <span>cornstarch</span></div>
-          <div class="col-lg-4">2 <span>chicken breasts</span></div>
-          <div class="col-lg-4">1 (12 oz.) <span>stir-fry vegetables</span></div>
-          <div class="col-lg-4">3 cups <span>brown rice</span></div>
+          <div class="col-lg-4">{{strMeasure1}}<span class="ml-2">{{strIngredient1}}</span></div>
+          <div class="col-lg-4">{{strMeasure2}}<span class="ml-2">{{strIngredient2}}</span></div>
+          <div class="col-lg-4">{{strMeasure3}}<span class="ml-2">{{strIngredient3}}</span></div>
+          <div class="col-lg-4">{{strMeasure4}}<span class="ml-2">{{strIngredient4}}</span></div>
+          <div class="col-lg-4">{{strMeasure5}}<span class="ml-2">{{strIngredient5}}</span></div>
+          <div class="col-lg-4">{{strMeasure6}}<span class="ml-2">{{strIngredient6}}</span></div>
+          <div class="col-lg-4">{{strMeasure7}}<span class="ml-2">{{strIngredient7}}</span></div>
+          <div class="col-lg-4">{{strMeasure8}}<span class="ml-2">{{strIngredient8}}</span></div>
+          <div class="col-lg-4">{{strMeasure9}}<span class="ml-2">{{strIngredient9}}</span></div>
+          <div class="col-lg-4">{{strMeasure10}}<span class="ml-2">{{strIngredient10}}</span></div>
+          <div class="col-lg-4">{{strMeasure11}}<span class="ml-2">{{strIngredient11}}</span></div>
+          <div class="col-lg-4">{{strMeasure12}}<span class="ml-2">{{strIngredient12}}</span></div>
+          <div class="col-lg-4">{{strMeasure13}}<span class="ml-2">{{strIngredient13}}</span></div>
+          <div class="col-lg-4">{{strMeasure14}}<span class="ml-2">{{strIngredient14}}</span></div>
+          <div class="col-lg-4">{{strMeasure15}}<span class="ml-2">{{strIngredient15}}</span></div>
+          <div class="col-lg-4">{{strMeasure16}}<span class="ml-2">{{strIngredient16}}</span></div>
+          <div class="col-lg-4">{{strMeasure17}}<span class="ml-2">{{strIngredient17}}</span></div>
+          <div class="col-lg-4">{{strMeasure18}}<span class="ml-2">{{strIngredient18}}</span></div>
+          <div class="col-lg-4">{{strMeasure19}}<span class="ml-2">{{strIngredient19}}</span></div>
+          <div class="col-lg-4">{{strMeasure20}}<span class="ml-2">{{strIngredient20}}</span></div>
         </div>
       </div>
     </div>
-    <!-- <div class="row">
-      <div class="col-lg-4">
-        <div class="receipe-banner">
-            <img class="img-fluid" src="https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg" alt="receipe"/>
-        </div>
-      </div>
-      <div class="col-lg-8">
-
-      </div>
-    </div> -->
+    {{/each}}
   </div>
 </section>
 
 {{#contentFor 'pageScripts'}}
-  <link rel="stylesheet" href="pages/js/receipe.js" />
+  <link rel="stylesheet" href="/pages/js/receipe.js" />
 {{/contentFor}}
