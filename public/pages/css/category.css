@@ -84,7 +84,7 @@
   cursor:pointer;
 }
 
-.category-grid-container{
-  height:calc(100vh - 50px);
+.category-grid-container, .category-container{
+  height:calc(100vh - 100px);
   overflow:auto;
 }

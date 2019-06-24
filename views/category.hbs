@@ -1,17 +1,18 @@
 {{#contentFor 'pageStyles'}}
+  <link rel="stylesheet" href="/plugin/mCustomScrollbar/jquery.mCustomScrollbar.css" />
   <link rel="stylesheet" href="/pages/css/category.css" />
 {{/contentFor}}
 
 <section id="receipeCategories" class="h-100">
   <div class="container-fluid">
-    <div class="category-head pt-5 pb-5">
+    <!-- <div class="category-head pt-5 pb-5">
       <h1 class="text-white text-center mb-0">Receipe Categories</h1>
-    </div>
+    </div> -->
     <div class="row">
       <div class="col-lg-8">
-        <div class="row">
+        <div class="row pt-3">
           <div class="col-lg-12">
-            <div id="custom-search-input" class="float-right mb-3">
+            <div id="custom-search-input" class="float-right mb-3 mr-4">
                 <div class="input-group col-md-12">
                     <input type="text" class="form-control input-lg" placeholder="Search" />
                     <span class="input-group-btn">
@@ -23,90 +24,39 @@
             </div>
           </div>
         </div>
-        <div class="row category-grid-container">
-          {{#each meals}}
-          <div class="col-lg-4">
-            <a class="card mb-4 text-white category-grid-card" href="/receipe/{{idMeal}}">
-                <img class="card-img-top" src="{{strMealThumb}}" alt="receipes">
-                <div class="overlay">
-                  <div class="text">{{strMeal}}</div>
-                </div>
-            </a>
-          </div>
+        <div class="category-grid-container">
+          <div class="row">
+          {{#each filterdetails}}
+            <div class="col-lg-4">
+              <a class="card mb-4 text-white category-grid-card" href="/receipe/{{filterid}}">
+                  <img class="card-img-top" src="{{filterimage}}" alt="receipes">
+                  <div class="overlay">
+                    <div class="text">{{filtername}}</div>
+                  </div>
+              </a>
+            </div>
           {{/each}}
+          </div>
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="row">
+        <div class="row pt-3">
           <div class="col-lg-12">
             <h3 class="text-white mt-2 mb-2">Categories</h3>
           </div>
         </div>
-        <div class="row mt-3">
-
-          <div class="col-lg-6">
-            <div class="card mb-3 text-white bg-dark category-card">
-              <img class="card-img-top" src="https://www.themealdb.com/images/category/beef.png" alt="Card image cap">
-              <div class="overlay">
-                <div class="text">Beef</div>
+        <div class="category-container">
+          <div class="row mt-3">
+          {{#each categorydetails}}
+            <div class="col-lg-6">
+              <div class="card mb-3 text-white bg-dark category-card" data-name="{{categoryname}}">
+                <img class="card-img-top" src="{{categoryimage}}" alt="categories">
+                <div class="overlay">
+                  <div class="text">{{categoryname}}</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card mb-3 text-white bg-dark category-card category-active">
-              <img class="card-img-top" src="https://www.themealdb.com/images/category/chicken.png" alt="Card image cap">
-              <div class="overlay">
-                <div class="text">Chicken</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card mb-3 text-white bg-dark  category-card">
-              <img class="card-img-top" src="https://www.themealdb.com/images/category/dessert.png" alt="Card image cap">
-              <div class="overlay">
-                <div class="text">Dessert</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card mb-3 text-white bg-dark  category-card">
-              <img class="card-img-top" src="https://www.themealdb.com/images/category/lamb.png" alt="Card image cap">
-              <div class="overlay">
-                <div class="text">Lamb</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card mb-3 text-white bg-dark category-card">
-              <img class="card-img-top" src="https://www.themealdb.com/images/category/miscellaneous.png" alt="Card image cap">
-              <div class="overlay">
-                <div class="text">Miscellaneous</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card mb-3 text-white bg-dark  category-card">
-              <img class="card-img-top" src="https://www.themealdb.com/images/category/pasta.png" alt="Card image cap">
-              <div class="overlay">
-                <div class="text">Pasta</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card mb-3 text-white bg-dark  category-card">
-              <img class="card-img-top" src="https://www.themealdb.com/images/category/beef.png" alt="Card image cap">
-              <div class="overlay">
-                <div class="text">Pork</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="card mb-3 text-white bg-dark  category-card">
-              <img class="card-img-top" src="https://www.themealdb.com/images/category/seafood.png" alt="Card image cap">
-              <div class="overlay">
-                <div class="text">Seafood</div>
-              </div>
-            </div>
+          {{/each}}
           </div>
         </div>
       </div>
@@ -115,5 +65,6 @@
 </section>
 
 {{#contentFor 'pageScripts'}}
-  <link rel="stylesheet" href="/pages/js/category.js" />
+  <script src="/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="/pages/js/category.js"></script>
 {{/contentFor}}
