@@ -88,3 +88,20 @@
   height:calc(100vh - 100px);
   overflow:auto;
 }
+
+#ui-id-1{
+  top: 70px !important;
+  left:25% !important;
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.ui-menu .ui-menu-item{
+  padding:0.35em !important;
+  padding-left:1.5em !important;
+}
+
+.ui-menu-item:hover .ui-menu-item-wrapper{
+  text-decoration:none !important;
+  color:#dc3545 !important;
+}

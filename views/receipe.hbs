@@ -6,8 +6,11 @@
     {{#each meals}}
     <div class="media pt-3 pb-3">
       <img class="mr-3 img-fluid col-lg-5" src="{{strMealThumb}}" alt="receipe">
-      <div class="media-body text-white">
+      <div class="media-body text-white position-relative">
         <h3 class="mt-0 text-warning">{{strMeal}}</h3>
+        <a class="home-icon" href="/">
+          <i class="fa fa-home text-white" aria-hidden="true"></i>
+        </a>
         <p class="pr-3">{{strInstructions}}</p>
         <h5 class="text-warning">Ingridients:-</h5>
         <div class="receipe-ingridients row">
