@@ -64,7 +64,7 @@
 
 /*------------------------------------------------------------------------------*/
 #receipeCategories{
-  background:url('../../images/homebackground.jpg');
+  background:url('../../images/categorybackground.jpg');
   background-size:cover;
   min-height:100vh;
 }
